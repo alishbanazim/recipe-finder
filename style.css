@@ -1,0 +1,300 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    background: linear-gradient(135deg, #2D080A, #321109, #130303);
+}
+
+
+.header {
+    height: fit-content;
+    width: 100%;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #390d03;
+    margin-bottom: 3rem;
+}
+
+.header h1 {
+    text-transform: uppercase;
+    font-size: 3rem;
+}
+
+.finder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.h2 {
+    font-size: 2.4rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.input {
+    outline: none;
+    border: none;
+    padding: 1rem 2rem;
+    background-color: transparent;
+    border-radius: 3rem;
+    box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.1),
+        2px 0px 2px rgba(255, 255, 255, 0.1);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: white;
+}
+
+input::placeholder {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.search {
+    padding: 1rem 2rem;
+    outline: none;
+    border: none;
+    font-size: 1.8rem;
+    border-radius: 3rem;
+    font-weight: 600;
+    color: white;
+    background-color: #2D080A;
+    box-shadow: 0px 2px 2px rgba(255, 255, 255, 0.1),
+        2px 0px 2px rgba(255, 255, 255, 0.1);
+    transition: all 0.3s linear;
+}
+
+.search:hover {
+    background-color: #441313;
+    transform: scale(1.002);
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.hidden {
+    display: none;
+}
+
+.card {
+    overflow: hidden;
+    border-radius: 2rem;
+    background: white;
+    color: black;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .2);
+    padding: 0;
+    transition: all 0.3 linear;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.content {
+    padding: 2rem;
+    text-align: center;
+}
+
+.content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.content p {
+    font-size: 1.8rem;
+}
+
+.content button {
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 3rem;
+    cursor: pointer;
+    font-size: 1.8rem;
+    font-weight: 600;
+    background: #390d03;
+    color: white;
+    margin-top: 2rem;
+    transition: all 0.3s linear;
+}
+
+.content button:hover {
+    background: #5d2012;
+    transform: scale(1.02);
+}
+
+.recipe {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width: 40%;
+    height: 60%;
+    background-color: #5d2012;
+    border-radius: 2rem;
+    padding: 1rem 3rem;
+    overflow-y: scroll;
+    z-index: 9999;
+}
+
+.recipe button {
+    color: aliceblue;
+    background-color: #130303;
+    border: none;
+    outline: none;
+    padding: 0.6rem;
+    border-radius: 1rem;
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+}
+
+.recipe::-webkit-scrollbar {
+    width: 1rem;
+}
+
+.recipe::-webkit-scrollbar-thumb {
+    background-color: #130303;
+    border-radius: 2rem;
+}
+.recipe::-webkit-scrollbar-thumb:hover {
+    background-color: #3b2222;
+}
+
+.recipe::-webkit-scrollbar-track {
+    background-color: #390d03;
+    border-radius: 2rem;
+}
+
+.recipe-content h1 {
+    text-align: center;
+    font-size: 3rem;
+    text-decoration: underline;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.recipe-content p {
+    line-height: 3rem;
+    text-align: justify;
+}
+
+.recipe-content h3 {
+    margin-top: 2rem;
+}
+
+@media(max-width: 768px) {
+    .header {
+
+        padding: 1rem 2rem;
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .finder {
+        flex-direction: column;
+        margin-top: 0.8rem;
+    }
+
+    .h2 {
+        font-size: 2rem;
+    }
+
+    .content {
+        padding: 1.5rem;
+    }
+
+    .content h1 {
+        font-size: 2.2rem;
+    }
+
+    .content p {
+        font-size: 1.6rem;
+    }
+
+    .content button {
+
+        font-size: 1.6rem;
+    }
+
+    .recipe {
+        padding: 1rem 2rem;
+
+    }
+
+    .recipe button {
+        padding: 0.4rem;
+        top: 0.2rem;
+        right: 0.5rem;
+    }
+
+    .recipe-content h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1.5rem;
+        margin-top: 1.4rem;
+    }
+
+    .recipe-content p {
+        line-height: 2.5rem;
+        text-align: left;
+        font-size: 1.4rem;
+    }
+
+    .recipe-content h3 {
+        margin-top: 1.7rem;
+        text-align: left;
+    }
+
+    .recipe-content ul li {
+        font-size: 1.6rem;
+    }
+}
+
+
+@media(max-width: 550px) {
+    .header h1 {
+        font-size: 2rem;
+    }
+
+    .recipe {
+        padding: 1rem 2rem;
+        width: 70%;
+        height: 60%;
+    }
+}
