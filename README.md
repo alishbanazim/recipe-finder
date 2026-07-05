@@ -2,6 +2,8 @@ Recipe Finder
 
 A responsive web application that allows users to search for recipes and view detailed cooking instructions, ingredients, category information, and meal origin using data fetched from TheMealDB API.
 
+Live demo
+https://alishbanazim.github.io/recipe-finder/
 
 Overview
 
